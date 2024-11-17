@@ -9,13 +9,13 @@
     android:padding="16dp"
     android:background="@android:color/white">
 
-
     <ImageView
         android:id="@+id/adventureImageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="-120dp"
-        android:src="@drawable/firstphoto"/>
+        android:src="@drawable/firstphoto"
+        android:contentDescription="Adventure Logo"/>
 
     <TextView
         android:id="@+id/welcomeTextView"
@@ -26,7 +26,6 @@
         android:text="Welcome back"
         android:textColor="@android:color/black"
         android:textSize="24sp" />
-
 
     <TextView
         android:id="@+id/signInTextView"
@@ -43,40 +42,34 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:hint="Enter your email"
-        app:boxBackgroundColor="#D8BFD8"
-        app:boxBackgroundMode="filled"
-        app:startIconDrawable="@drawable/mail"
-        >
+        app:endIconDrawable="@drawable/mail"
+        app:endIconMode="custom"
+        style="@style/TextInputStyle">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:paddingStart="48dp"
-            tools:ignore="SpeakableTextPresentCheck"
-            />
-
+            tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:hint="Password"
-        app:boxBackgroundColor="#D8BFD8"
-        app:boxBackgroundMode="filled"
-        app:startIconDrawable="@drawable/lock"
-        >
+        app:endIconDrawable="@drawable/lock"
+        app:endIconMode="custom"
+        style="@style/TextInputStyle">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:paddingStart="48dp"
             tools:ignore="SpeakableTextPresentCheck" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
@@ -85,7 +78,8 @@
         android:orientation="horizontal"
         android:gravity="start"
         android:layout_marginTop="16dp">
-        <CheckBox
+
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/rememberMeCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -101,14 +95,12 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:textColor="@android:color/white"
-        android:layout_marginTop="24dp" />
+        style="@style/MaterialButtonStyle" />
     <TextView
         android:id="@+id/newMemberTextView"
         android:layout_width="wrap_content"
@@ -116,5 +108,4 @@
         android:text="New Member? Register now"
         android:textColor="@android:color/holo_blue_dark"
         android:layout_marginTop="16dp" />
-
 </LinearLayout>
