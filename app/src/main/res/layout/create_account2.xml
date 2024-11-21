@@ -29,19 +29,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="by creatting a free account"
+        android:text="by creating a free account"
         android:layout_marginStart="76dp"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp" />
 
     <EditText
-        android:id="@+id/FullNameEditText"
+        android:id="@+id/fullNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
         android:hint="Full name"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp" />
+
     <EditText
         android:id="@+id/validEmailEditText"
         android:layout_width="match_parent"
@@ -49,15 +50,16 @@
         android:background="@drawable/edittext_background"
         android:hint="Valid email"
         android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp" />
+
     <EditText
         android:id="@+id/phoneNumberEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
         android:hint="Phone number"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp"/>
+        android:inputType="phone"
+        android:layout_marginBottom="16dp" />
 
     <EditText
         android:id="@+id/strongPasswordEditText"
@@ -66,7 +68,7 @@
         android:hint="Strong password"
         android:inputType="textPassword"
         android:background="@drawable/edittext_background"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,15 +76,16 @@
         android:orientation="horizontal"
         android:gravity="start"
         android:layout_marginTop="16dp">
+
         <CheckBox
-            android:id="@+id/rememberMeCheckBox"
+            android:id="@+id/agreeTermsCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="10sp"
-            android:text="by checking the box you agree to our" />
+            android:text="By checking the box, you agree to our" />
 
         <TextView
-            android:id="@+id/forgotPasswordTextView"
+            android:id="@+id/termsAndConditionsTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
@@ -90,11 +93,10 @@
             android:text="Terms and Conditions"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="10sp" />
-
     </LinearLayout>
 
     <Button
-        android:id="@+id/nextButton"
+        android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
@@ -103,11 +105,10 @@
         android:layout_marginTop="24dp" />
 
     <TextView
-        android:id="@+id/newMemberTextView"
+        android:id="@+id/alreadyMemberTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Already a member? Log in"
         android:textColor="@android:color/holo_blue_dark"
         android:layout_marginTop="16dp" />
-
 </LinearLayout>
