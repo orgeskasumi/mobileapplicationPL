@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/adventureImageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="-120dp"
-        android:src="@drawable/firstphoto"/>
+        android:src="@drawable/firstphoto"
+        android:contentDescription="Adventure Logo"/>
 
     <TextView
         android:id="@+id/welcomeTextView"
@@ -34,42 +38,72 @@
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/fullNameEditText"
+    <!-- Material Design EditText fields -->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="16dp"
         android:hint="Full name"
-        android:inputType="textPersonName"
-        android:layout_marginBottom="16dp" />
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:hintTextColor="@android:color/darker_gray"
+        app:boxBackgroundColor="@android:color/white">
 
-    <EditText
-        android:id="@+id/validEmailEditText"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fullNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="16dp"
         android:hint="Valid email"
-        android:inputType="textEmailAddress"
-        android:layout_marginBottom="16dp" />
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:hintTextColor="@android:color/darker_gray"
+        app:boxBackgroundColor="@android:color/white">
 
-    <EditText
-        android:id="@+id/phoneNumberEditText"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/validEmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edittext_background"
+        android:layout_marginBottom="16dp"
         android:hint="Phone number"
-        android:inputType="phone"
-        android:layout_marginBottom="16dp" />
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:hintTextColor="@android:color/darker_gray"
+        app:boxBackgroundColor="@android:color/white">
 
-    <EditText
-        android:id="@+id/strongPasswordEditText"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:hint="Strong password"
-        android:inputType="textPassword"
-        android:background="@drawable/edittext_background"
-        android:layout_marginBottom="16dp" />
+        app:boxStrokeColor="@android:color/darker_gray"
+        app:hintTextColor="@android:color/darker_gray"
+        app:boxBackgroundColor="@android:color/white">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/strongPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Terms and Conditions checkbox -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,7 +111,7 @@
         android:gravity="start"
         android:layout_marginTop="16dp">
 
-        <CheckBox
+        <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/agreeTermsCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,15 +129,18 @@
             android:textSize="10sp" />
     </LinearLayout>
 
-    <Button
+    <!-- Material Design Button -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
-        android:backgroundTint="@android:color/holo_blue_light"
+        app:cornerRadius="8dp"
         android:textColor="@android:color/white"
+        app:backgroundTint="@android:color/holo_blue_light"
         android:layout_marginTop="24dp" />
 
+    <!-- Already a member, login link -->
     <TextView
         android:id="@+id/alreadyMemberTextView"
         android:layout_width="wrap_content"

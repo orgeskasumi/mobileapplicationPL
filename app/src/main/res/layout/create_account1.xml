@@ -93,11 +93,23 @@
         android:text="Next"
         style="@style/MaterialButtonStyle" />
 
-    <TextView
-        android:id="@+id/newMemberTextView"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerNowButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:elevation="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
         android:text="New Member? Register now"
         android:textColor="@android:color/holo_blue_dark"
-        android:layout_marginTop="16dp" />
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="16dp"
+        android:padding="0dp"
+        android:gravity="center"
+        android:letterSpacing="0"
+        />
+
+
 </LinearLayout>

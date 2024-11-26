@@ -14,7 +14,6 @@ class RegisterActivity : AppCompatActivity() {
 
         val loginTextView = findViewById<TextView>(R.id.alreadyMemberTextView)
         loginTextView.setOnClickListener {
-            // Navigate back to Login Activity
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
@@ -22,9 +21,5 @@ class RegisterActivity : AppCompatActivity() {
         val nextButton = findViewById<MaterialButton>(R.id.registerButton)
         nextButton.setOnClickListener {
         }
-        val loginIntent = Intent(this, LoginActivity::class.java)
-        loginIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-        startActivity(loginIntent)
-
     }
 }

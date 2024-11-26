@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
-import android.widget.TextView
 
 class LoginActivity : AppCompatActivity() {
 
@@ -12,15 +11,16 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.create_account1)
 
-        val registerTextView = findViewById<TextView>(R.id.newMemberTextView)
-        registerTextView.setOnClickListener {
+        val registerButton = findViewById<MaterialButton>(R.id.registerNowButton)
 
+        registerButton?.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
         val nextButton = findViewById<MaterialButton>(R.id.nextButton)
         nextButton.setOnClickListener {
+
         }
     }
 }
