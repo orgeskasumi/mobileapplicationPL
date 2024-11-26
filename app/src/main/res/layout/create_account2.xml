@@ -38,7 +38,6 @@
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp" />
 
-    <!-- Material Design EditText fields -->
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -103,7 +102,6 @@
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Terms and Conditions checkbox -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -129,7 +127,6 @@
             android:textSize="10sp" />
     </LinearLayout>
 
-    <!-- Material Design Button -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/registerButton"
         android:layout_width="match_parent"
@@ -140,7 +137,6 @@
         app:backgroundTint="@android:color/holo_blue_light"
         android:layout_marginTop="24dp" />
 
-    <!-- Already a member, login link -->
     <TextView
         android:id="@+id/alreadyMemberTextView"
         android:layout_width="wrap_content"

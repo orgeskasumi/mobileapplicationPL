@@ -1,16 +1,20 @@
 package com.example.createaccountapp
 
-class CredentialsManager {
+object CredentialsManager {
 
-    private val validEmail = "testtest@gmail.com"
-    private val validPassword = "qwerty"
+    private val credentialsMap: MutableMap<String, String> = mutableMapOf()
 
-    fun isEmailCorrect(email: String): Boolean {
-        return email == validEmail
+    fun register(email: String, password: String): String {
+
+        if (credentialsMap.containsKey(email)) {
+            return "Error: Email is already taken"
+        } else {
+            credentialsMap[email] = password
+            return "Account created successfully"
+        }
     }
 
-
-    fun isPasswordCorrect(password: String): Boolean {
-        return password == validPassword
+    fun login(email: String, password: String): Boolean {
+        return credentialsMap[email] == password
     }
 }
