@@ -107,14 +107,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="start"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="13dp">
 
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/agreeTermsCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="10sp"
-            android:text="By checking the box, you agree to our" />
+            android:text="By checking the box, you agree to our"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/termsAndConditionsTextView"
@@ -135,7 +135,7 @@
         app:cornerRadius="8dp"
         android:textColor="@android:color/white"
         app:backgroundTint="@android:color/holo_blue_light"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:id="@+id/alreadyMemberTextView"
@@ -143,5 +143,5 @@
         android:layout_height="wrap_content"
         android:text="Already a member? Log in"
         android:textColor="@android:color/holo_blue_dark"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="2dp" />
 </LinearLayout>

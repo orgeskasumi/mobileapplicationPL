@@ -1,10 +1,13 @@
 package com.example.createaccountapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.Button
 import android.widget.Toast
+import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +18,15 @@ class MainActivity : AppCompatActivity() {
         val emailInput = findViewById<EditText>(R.id.emailEditText)
         val passwordInput = findViewById<EditText>(R.id.passwordEditText)
         val loginButton = findViewById<Button>(R.id.nextButton)
+
+
+        val registerButton = findViewById<MaterialButton>(R.id.registerNowButton)
+
+        registerButton.setOnClickListener {
+            Log.d("TAG", "Clicked register")
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
 
         loginButton.setOnClickListener {
             val email = emailInput.text.toString()

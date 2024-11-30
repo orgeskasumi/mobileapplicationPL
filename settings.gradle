@@ -12,5 +12,14 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+dependencyResolutionManagement {
+    repositories {
+        google()  // Add this repository here
+        mavenCentral()  // Ensure Maven Central is added
+        jcenter()  // Optional: Add jCenter if needed
+    }
+}
+
+
 rootProject.name = "CreateAccountApp"
 include ':app'
