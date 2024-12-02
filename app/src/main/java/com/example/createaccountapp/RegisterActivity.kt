@@ -24,6 +24,7 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.create_account2)
+        CredentialsManager.init(this)
 
         credentialsManager = CredentialsManager
         fullNameEditText = findViewById(R.id.fullNameEditText)

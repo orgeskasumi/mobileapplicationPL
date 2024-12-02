@@ -13,13 +13,15 @@
         android:theme="@style/Theme.CreateAccountApp"
         tools:targetApi="33">
         <activity
+            android:name=".BlankActivity"
+            android:exported="true" />
+        <activity
             android:name=".SampleActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-        </activity>
-        <!-- MainActivity -->
+        </activity> <!-- MainActivity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -36,6 +38,5 @@
             android:name=".RegisterActivity"
             android:exported="true" />
     </application>
-
 
 </manifest>
