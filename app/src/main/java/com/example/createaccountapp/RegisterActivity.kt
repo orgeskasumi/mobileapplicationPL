@@ -8,7 +8,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.checkbox.MaterialCheckBox
 import com.google.android.material.textfield.TextInputEditText
 import android.widget.TextView
-import com.example.createaccountapp.CredentialsManager // Assuming this is in the same package
+import com.example.createaccountapp.CredentialsManager
 
 class RegisterActivity : AppCompatActivity() {
 

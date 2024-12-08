@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/adventureImageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-120dp"
+        android:src="@drawable/firstphoto"
+        android:contentDescription="Adventure Logo"/>
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginStart="96dp"
+        android:text="Welcome back"
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
+
+    <!-- Sign-In Text -->
+    <TextView
+        android:id="@+id/signInTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="sign in to access your account"
+        android:layout_marginStart="76dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+
+    <!-- Email Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Enter your email"
+        style="@style/TextInputStyle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Password"
+        style="@style/TextInputStyle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Remember Me Checkbox & Forgot Password -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/rememberMeCheckBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember me" />
+
+        <TextView
+            android:id="@+id/forgotPasswordTextView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Next Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        style="@style/MaterialButtonStyle" />
+
+    <!-- Register Now Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerNowButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:elevation="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="New Member? Register now"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginTop="16dp"
+        android:padding="0dp"
+        android:gravity="center"
+        android:letterSpacing="0" />
+</LinearLayout>
