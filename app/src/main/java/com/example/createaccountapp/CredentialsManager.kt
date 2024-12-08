@@ -6,8 +6,6 @@ import android.content.SharedPreferences
 object CredentialsManager {
 
     private const val PREF_NAME = "UserCredentials"
-    private const val KEY_EMAIL = "email"
-    private const val KEY_PASSWORD = "password"
 
     private lateinit var sharedPreferences: SharedPreferences
 
@@ -15,17 +13,25 @@ object CredentialsManager {
         sharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
     }
 
+    // Register a user by saving email and password to SharedPreferences
     fun register(email: String, password: String): String {
         val editor = sharedPreferences.edit()
-        editor.putString(KEY_EMAIL, email)
-        editor.putString(KEY_PASSWORD, password)
+
+        // Check if the user already exists
+        val existingPassword = sharedPreferences.getString(email, null)
+        if (existingPassword != null) {
+            return "User already exists!"
+        }
+
+        // Store the email and password
+        editor.putString(email, password)
         editor.apply()
         return "Account created successfully"
     }
 
+    // Log in a user by checking if the email and password match
     fun login(email: String, password: String): Boolean {
-        val savedEmail = sharedPreferences.getString(KEY_EMAIL, null)
-        val savedPassword = sharedPreferences.getString(KEY_PASSWORD, null)
-        return savedEmail == email && savedPassword == password
+        val savedPassword = sharedPreferences.getString(email, null)
+        return savedPassword == password
     }
 }
